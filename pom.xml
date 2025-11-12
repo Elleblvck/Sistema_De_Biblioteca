@@ -14,4 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+         <properties>
+  <sonar.organization>elleblvck</sonar.organization>
+ </properties>
+
 </project>
