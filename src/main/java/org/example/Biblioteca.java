@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class Biblioteca {
     private ArrayList<Libro> libros = new ArrayList<>();
 
+    // 🏆 Mejora: Definición de una constante para la cadena literal
+    private static final String PREFIJO_LIBRO = "El libro ";
+
     // Metodo para agregar un libro a la biblioteca
     public void agregarLibro(Libro libro) {
         libros.add(libro);
@@ -18,19 +21,23 @@ public class Biblioteca {
         }
     }
 
+    // --- CÓDIGO REFABRICADO ---
     // Metodo para prestar un libro por titulo
     public void prestarLibro(String titulo) {
         for (Libro libro : libros) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 if (libro.prestar()) {
-                    System.out.println("El libro \"" + titulo + "\" ha sido prestado.");
+                    // Uso de la constante
+                    System.out.println(PREFIJO_LIBRO + "\"" + titulo + "\" ha sido prestado.");
                 } else {
-                    System.out.println("El libro \"" + titulo + "\" ya esta prestado.");
+                    // Uso de la constante
+                    System.out.println(PREFIJO_LIBRO + "\"" + titulo + "\" ya esta prestado.");
                 }
                 return;
             }
         }
-        System.out.println("El libro \"" + titulo + "\" no se encuentra disponible.");
+        // Uso de la constante
+        System.out.println(PREFIJO_LIBRO + "\"" + titulo + "\" no se encuentra disponible.");
     }
 
     // Metodo para devolver un libro por titulo
@@ -38,10 +45,12 @@ public class Biblioteca {
         for (Libro libro : libros) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 libro.devolver();
-                System.out.println("El libro \"" + titulo + "\" ha sido devuelto.");
+                // Uso de la constante
+                System.out.println(PREFIJO_LIBRO + "\"" + titulo + "\" ha sido devuelto.");
                 return;
             }
         }
-        System.out.println("El libro \"" + titulo + "\" no se encuentra en la biblioteca");
+        // Uso de la constante
+        System.out.println(PREFIJO_LIBRO + "\"" + titulo + "\" no se encuentra en la biblioteca");
     }
 }
