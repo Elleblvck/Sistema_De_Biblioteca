@@ -12,10 +12,8 @@
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.organization>elleblvck</sonar.organization>
     </properties>
 
-         <properties>
-  <sonar.organization>elleblvck</sonar.organization>
- </properties>
-
+  
 </project>
